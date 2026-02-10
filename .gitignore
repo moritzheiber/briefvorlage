@@ -1,0 +1,7 @@
+/*.pdf
+/.vscode
+/*.md
+
+!/example-letter.md
+!/README.md
+!/LICENSE
