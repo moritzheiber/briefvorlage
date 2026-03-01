@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - example-letter.md
+  workflow_dispatch:
 
 permissions:
   contents: write
