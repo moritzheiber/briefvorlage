@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - example-letter.md
+      - letter.typ
   workflow_dispatch:
 
 permissions:
