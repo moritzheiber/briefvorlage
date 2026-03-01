@@ -2,6 +2,10 @@
 
 Markdown to PDF letter template using Pandoc and Typst.
 
+## Preview
+
+![Example letter](example-letter.png)
+
 ## Requirements
 
 - pandoc

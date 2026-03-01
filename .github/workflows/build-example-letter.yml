@@ -16,10 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install pandoc
+      - name: Install pandoc and poppler-utils
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc
+          sudo apt-get install -y pandoc poppler-utils
 
       - name: Install typst
         run: sudo snap install typst
@@ -28,9 +28,13 @@ jobs:
         run: |
           pandoc example-letter.md --template=letter.typ --pdf-engine=typst -o example-letter.pdf
 
-      - name: Commit and push PDF
+      - name: Generate preview image
+        run: |
+          pdftoppm example-letter.pdf example-letter -png -f 1 -singlefile
+
+      - name: Commit and push PDF and preview
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git add example-letter.pdf
-          git diff --cached --quiet || git commit -m "Update example-letter.pdf" && git push
+          git add example-letter.pdf example-letter.png
+          git diff --cached --quiet || git commit -m "Update example-letter.pdf and preview" && git push
