@@ -4,7 +4,7 @@ Markdown to PDF letter template using Pandoc and Typst.
 
 ## Preview
 
-![Example letter](example-letter.png)
+<p align="center"><img src="example-letter.png" width="400" /></p>
 
 ## Requirements
 
