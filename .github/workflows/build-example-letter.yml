@@ -1,4 +1,4 @@
-git sname: Build Example Letter PDF
+name: Build Example Letter PDF
 
 on:
   push:
