@@ -22,7 +22,7 @@ jobs:
           sudo apt-get install -y pandoc
 
       - name: Install typst
-        run: snap install typst
+        run: sudo snap install typst
 
       - name: Build PDF
         run: |
