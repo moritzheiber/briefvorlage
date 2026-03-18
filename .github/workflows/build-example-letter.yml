@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: typst-community/setup-typst@v4
+      - uses: typst-community/setup-typst@v5
       - name: Install pandoc and poppler-utils
         run: |
           sudo apt-get update
